@@ -34,6 +34,16 @@ namespace TravelAPI.Controllers
             }
             return BadRequest(result);
         }
+        [HttpGet("GetAllGuidesByTour")]
+        public IActionResult GetAllGuidesByTour(int tourId)
+        {
+            var result = _guideService.GetAllGuidesByTour(tourId);
+            if( result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
         [HttpPost("AddGuide")]
         public IActionResult Add(Guide guide)
         {
