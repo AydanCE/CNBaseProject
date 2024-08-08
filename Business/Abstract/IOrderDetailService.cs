@@ -1,5 +1,6 @@
 ﻿using Core.Helpers.Result.Abstract;
 using Entities.Concrete;
+using Entities.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,12 +9,9 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface ITourService
+    public interface IOrderDetailService
     {
-        IResult Add(Tour tour);
-        IResult Update(Tour tour);
-        IResult Delete(int id);
-        IDataResult<List<Tour>> GetAllTour();
-        IDataResult<Tour> GetTour(int id);
+        IResult AddOrderDetail(OrderDetail orderDetail);
+        IDataResult<List<OrderDetailDto>> GetAllOrderDetails();
     }
 }

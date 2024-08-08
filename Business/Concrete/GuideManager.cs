@@ -24,18 +24,18 @@ namespace Business.Concrete
             }
             return new ErrorResult($"{guide.FirstName} cannot be added!");
         }
-        public IResult Delete(Guide guide)
+        public IResult Delete(int id)
         {
             Guide deleteGuide = null;
-            Guide resultGuide = _guideDal.Get(g => g.Id == guide.Id && g.IsDelete == false);
+            Guide resultGuide = _guideDal.Get(g => g.Id == id && g.IsDelete == false);
             if (resultGuide != null)
             {
                 deleteGuide = resultGuide;
                 deleteGuide.IsDelete = true;
                 _guideDal.Delete(deleteGuide);
-                return new SuccessResult($"{guide.FirstName} has been deleted");
+                return new SuccessResult($"Guide has been deleted");
             }
-            return new ErrorResult($"{guide.FirstName} is not found");
+            return new ErrorResult($"Guide is not found");
         }
         public IResult Update(Guide guide)
         {
@@ -60,14 +60,14 @@ namespace Business.Concrete
             }
             return new ErrorDataResult<List<Guide>>("Error occured!");
         }
-        public IDataResult<Guide> GetGuide(Guide guide)
+        public IDataResult<Guide> GetGuide(int id)
         {
-            Guide getGuide = _guideDal.Get(g => g.Id == guide.Id && g.IsDelete == false);
+            Guide getGuide = _guideDal.Get(g => g.Id == id && g.IsDelete == false);
             if (getGuide != null)
             {
-                return new SuccessDataResult<Guide>(getGuide, $"{guide.FirstName} has been gotten");
+                return new SuccessDataResult<Guide>(getGuide, $"Guide has been gotten");
             }
-            return new ErrorDataResult<Guide>($"{guide.FirstName} is not found");
+            return new ErrorDataResult<Guide>($"Guide is not found");
         }
     }
 }

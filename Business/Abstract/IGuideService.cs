@@ -12,8 +12,8 @@ namespace Business.Abstract
     {
         IResult Add(Guide guide);
         IResult Update(Guide guide);
-        IResult Delete(Guide guide);
+        IResult Delete(int id);
         IDataResult<List<Guide>> GetAllGuide();
-        IDataResult<Guide> GetGuide(Guide guide);
+        IDataResult<Guide> GetGuide(int id);
     }
 }

@@ -11,5 +11,9 @@ namespace DataAccess.Concrete.EF
 {
     public class EfTourDal : BaseRepository<Tour, BaseProjectContext>, ITourDal
     {
+        public EfTourDal(BaseProjectContext context) : base(context)
+        {
+
+        }
     }
 }

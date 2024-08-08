@@ -23,18 +23,18 @@ namespace Business.Concrete
             }
             return new ErrorResult($"{customer.FirstName} cannot be added!");
         }
-        public IResult Delete(Customer customer)
+        public IResult Delete(int id)
         {
             Customer deleteCustomer = null;
-            Customer resultCustomer = _customerDal.Get(c=>c.Id ==  customer.Id && c.IsDelete == false);
+            Customer resultCustomer = _customerDal.Get(c=>c.Id ==  id && c.IsDelete == false);
             if(resultCustomer != null)
             {
                 deleteCustomer = resultCustomer;
                 deleteCustomer.IsDelete = true;
                 _customerDal.Delete(deleteCustomer);
-                return new SuccessResult($"{customer.FirstName} has been deleted");
+                return new SuccessResult($"Customer has been deleted");
             }
-            return new ErrorResult($"{customer.FirstName} is not found");
+            return new ErrorResult($"Customer is not found");
         }
         public IResult Update(Customer customer)
         {
@@ -59,14 +59,14 @@ namespace Business.Concrete
             }
             return new ErrorDataResult<List<Customer>>("Error occured!");
         }
-        public IDataResult<Customer> GetCustomer(Customer customer)
+        public IDataResult<Customer> GetCustomer(int id)
         {
-            Customer getCustomer = _customerDal.Get(c => c.Id == customer.Id && c.IsDelete == false);
+            Customer getCustomer = _customerDal.Get(c => c.Id == id && c.IsDelete == false);
             if(getCustomer != null)
             {
-                return new SuccessDataResult<Customer>(getCustomer, $"{customer.FirstName} has been gotten");
+                return new SuccessDataResult<Customer>(getCustomer, $"Customer has been gotten");
             }
-            return new ErrorDataResult<Customer>($"{customer.FirstName} is not found");
+            return new ErrorDataResult<Customer>($"Customer is not found");
         }
     }
 }

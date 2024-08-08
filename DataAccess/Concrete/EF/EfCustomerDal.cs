@@ -12,6 +12,9 @@ namespace DataAccess.Concrete.EF
 {
     public class EfCustomerDal : BaseRepository<Customer, BaseProjectContext>, ICustomerDal
     {
-        
+        public EfCustomerDal(BaseProjectContext context) : base(context)
+        {
+
+        }
     }
 }

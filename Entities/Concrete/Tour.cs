@@ -11,7 +11,7 @@ namespace Entities.Concrete
     {
         public string TourName { get; set; }
         public string Description { get; set; }
-        public double TourPrice { get; set; }
+        public decimal TourPrice { get; set; }
         public bool IsDiscount {  get; set; }
         public int DiscountRate { get; set; }
     }

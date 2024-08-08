@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EF
 {
-    public class EfGuideDal : BaseRepository<Guide, BaseProjectContext>, IGuideDal
+    public class EfOrderDal : BaseRepository<Order, BaseProjectContext>, IOrderDal
     {
-        public EfGuideDal(BaseProjectContext context) : base(context) 
+        public EfOrderDal(BaseProjectContext context) : base(context)
         {
 
         }

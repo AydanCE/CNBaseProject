@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{CDA564B2-E2B5-4FCD-92A0-8E09DDB9ECF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelConsole", "TravelConsole\TravelConsole.csproj", "{AD79DA50-AEC9-4050-8BC8-2CF74981A0B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAPI", "TravelAPI\TravelAPI.csproj", "{9467C9B9-9349-42CC-974E-BDBA15007B00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{CDA564B2-E2B5-4FCD-92A0-8E09DDB9ECF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDA564B2-E2B5-4FCD-92A0-8E09DDB9ECF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDA564B2-E2B5-4FCD-92A0-8E09DDB9ECF8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AD79DA50-AEC9-4050-8BC8-2CF74981A0B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD79DA50-AEC9-4050-8BC8-2CF74981A0B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD79DA50-AEC9-4050-8BC8-2CF74981A0B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD79DA50-AEC9-4050-8BC8-2CF74981A0B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9467C9B9-9349-42CC-974E-BDBA15007B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9467C9B9-9349-42CC-974E-BDBA15007B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9467C9B9-9349-42CC-974E-BDBA15007B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9467C9B9-9349-42CC-974E-BDBA15007B00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

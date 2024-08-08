@@ -2,13 +2,13 @@
 using DataAccess.Concrete.EF;
 using Entities.Concrete;
 
-Tour tour2 = new() { TourName = "Quba", Description = "15 people", TourPrice = 90, IsDiscount = false, DiscountRate = 0};
+//Tour tour2 = new() { TourName = "Quba", Description = "15 people", TourPrice = 90, IsDiscount = false, DiscountRate = 0};
 
-TourManager tourManager = new TourManager(new EfTourDal());
+//TourManager tourManager = new TourManager(new EfTourDal());
 
-//tourManager.Add(tour2);
+////tourManager.Add(tour2);
 
-var allTours = tourManager.GetAllTour();
+//var allTours = tourManager.GetAllTour();
 //foreach(var tour in allTours.Data)
 //{
 //    Console.WriteLine(tour.TourName);
