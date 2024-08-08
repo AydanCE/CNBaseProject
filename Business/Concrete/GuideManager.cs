@@ -4,6 +4,7 @@ using Core.Helpers.Result.Concrete;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EF;
 using Entities.Concrete;
+using Entities.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -68,6 +69,15 @@ namespace Business.Concrete
                 return new SuccessDataResult<Guide>(getGuide, $"Guide has been gotten");
             }
             return new ErrorDataResult<Guide>($"Guide is not found");
+        }
+        public IDataResult<List<GuideDto>> GetAllGuidesByTour(int tourId)
+        {
+            var result = _guideDal.GetAllGuidesByTour(tourId);
+            if(result.Count > 0)
+            {
+                return new SuccessDataResult<List<GuideDto>>(result, "List has been downloaded");
+            }
+            return new ErrorDataResult<List<GuideDto>>(result, "Error occured");
         }
     }
 }
