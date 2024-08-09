@@ -19,5 +19,9 @@ namespace DataAccess.Concrete.EF
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<AboutUs> AboutUss { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Faq> Faqs { get; set; }
+        public DbSet<TermAndCondition> TermAndConditions {  get; set; } 
      }
 }
